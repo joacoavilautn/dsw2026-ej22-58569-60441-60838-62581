@@ -83,4 +83,109 @@
   .dashboard-container header div .menu {
     display: none;
   }
+
+  /* --- Tipografía y Fondo general --- */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+
+  /* --- Título de la sección --- */
+  main h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: #0f172a;
+  }
+
+  /* --- Barra de Búsqueda --- */
+  #search-input {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    width: 280px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  #search-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+
+  #search-btn {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: background-color 0.2s;
+  }
+
+  #search-btn:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* --- Tabla con estilo del TPI --- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+  }
+
+  th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.85rem 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  td {
+    padding: 1rem;
+    color: #334155;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  /* Botón cerrar sesión */
+  #logout {
+    background: transparent;
+    color: #e2e8f0;
+    border: 1px solid #64748b;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+
+  #logout:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
 }
