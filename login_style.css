@@ -1,27 +1,14 @@
-.login-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+
+body.bg-primary {
+    background: radial-gradient(circle at center, #003666 0%, #001833 100%) !important;
 }
 
-.login-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+.btn-dark {
+    background-color: #002b54 !important;
+    border-color: #001a33 !important;
 }
 
-@media screen and (min-width: 600px) {
-  .login-container {
-    align-items: center;
-  }
-
-  .login-container form {
-    width: 400px;
-  }
-}
+    .btn-dark:hover {
+        background-color: #001a33 !important;
+    }
