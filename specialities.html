@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidades</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="specialities_style.css">
+    <script src="specialities.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+    <header>
+      <span>Gestor de turnos</span>
+      <div>
+        <button id="menubtn" class="menu">&#9776;</button>
+        <button id="logout">Cerrar Sesión</button>
+      </div>
+    </header>
+    <nav id="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Panel</a></li>
+        <li><a href="specialities.html">Especialidades</a></li>
+        <li><a href="">Profesionales</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Especialidades</h1>
+      <input type="text" id="search-input" placeholder="Ingrese el nombre de la especialidad">
+      <button id="search-btn">Buscar</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body">
+          <!-- Los productos se cargarán aquí dinámicamente -->
+
+        </tbody>
+      </table>
+    </main>
+    <footer>Mi Aplicación &copy; 2024</footer>
+  </div>
+</body>
+</html>
