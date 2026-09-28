@@ -1,10 +1,292 @@
-body {
-  margin: 0;
-  font-size: 1rem;
+:root {
+  --navy: #0b3a6b;
+  --navy-dark: #072a4f;
+  --bg: #eff7fc;
+  --surface: #ffffff;
+  --line: #d9e6f0;
+  --text: #12243a;
+  --muted: #5b6f84;
+  --ok: #0f7a64;
+  --ok-bg: #dff5ee;
+  --warn: #8a5a00;
+  --warn-bg: #fdf0d0;
+  --radius: 8px;
+  --sidebar-w: 200px;
 }
 
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  color: var(--navy);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--navy);
+}
+
+.subtitle {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--navy-dark);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--navy);
+}
+
+.btn-secondary:hover {
+  background: var(--bg);
+}
+
+.btn .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn .icon path {
+  stroke: currentColor;
+  stroke-width: 1px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+ 
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+ 
+.badge-ok {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+ 
+.badge-warn {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+/* Tabla: en la version mobile hace el srcroll horizontal dentro de su contenedor*/
+.table-wrap {
+  overflow-x: auto;
+}
+ 
+table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+ 
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+ 
+th {
+  background: #e4f1fa;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* 4. Layout de la app mobile: barra superior + menú lateral oculto */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 52px;
+  padding: 0 1rem;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 600;
+}
+ 
+.menu-btn {
+  padding: 0.25rem 0.5rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+ 
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+}
+ 
+.sidebar.open {
+  transform: translateX(0);
+}
+ 
+.sidebar-brand {
+  padding: 1.25rem 1rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+ 
+.sidebar-brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+ 
+.sidebar ul {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+}
+ 
+.sidebar a,
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-left: 3px solid transparent;
+  background: transparent;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+}
+ 
+.sidebar a:hover,
+.sidebar button:hover {
+  background: var(--bg);
+}
+ 
+.sidebar a.active {
+  border-left-color: var(--navy);
+  background: var(--bg);
+  color: var(--navy);
+  font-weight: 600;
+}
+ 
+.sidebar-footer {
+  padding-bottom: 0.5rem;
+  border-top: 1px solid var(--line);
+}
+ 
+.content {
+  padding: 1rem;
+}
+
+/* 5. Layout del Escritorio: barra lateral siempre visible, fija y sin boton */
 @media screen and (min-width: 600px) {
-  body {
-    font-size: 1rem;
+  .app-container {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  }
+ 
+  .topbar {
+    display: none;
+  }
+ 
+  .sidebar {
+    position: sticky;
+    height: 100dvh;
+    transform: none;
+    transition: none;
+  }
+ 
+  .content {
+    padding: 1.5rem;
   }
 }
