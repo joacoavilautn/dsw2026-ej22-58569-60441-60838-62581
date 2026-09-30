@@ -1,191 +1,121 @@
-.dashboard-container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  height: 100dvh;
+/* Botones de acción: uno debajo del otro en móvil */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.search-field {
+  position: relative;
 }
 
-.dashboard-container nav {
+.search-field .icon {
   position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.search-field .input {
+  padding-left: 2.25rem;
+}
+ 
+/*Iconos de la tabla*/
+.table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn-icon svg {
+  pointer-events: none;
+}
+
+/* Tarjetas de resumen: se acomodan solas según el ancho disponible */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+ 
+.stat {
+  position: relative;
+  padding: 1rem 1rem 1rem 1.25rem; /* Un poco más de espacio a la izquierda */
+  overflow: hidden;
+}
+/* La barrita base */
+.stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
-  width: 200px;
-  background-color: #f4f4f4;
-  left: -200px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
 }
-
-.dashboard-container nav.open {
-  left: 0;
+/* Color para la 1ra tarjeta (Azul intermedio) */
+.stats .stat:nth-child(1)::before {
+  background-color: #0b4f6c;
 }
-
-.dashboard-container nav ul {
-  list-style: none;
-  padding: 0;
+/* Color para la 2da tarjeta (Azul marino oscuro) */
+.stats .stat:nth-child(2)::before {
+  background-color: #072a4f;
+}
+/* Color para la 3ra tarjeta (Turquesa / Menta) */
+.stats .stat:nth-child(3)::before {
+  background-color: #00c49f;
+}
+ 
+.stat-label {
+  display:flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+ 
+.stat-value {
+  margin: 0.25rem 0 0;
+  color: var(--navy);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.dashboard-container nav ul li {
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-}
 
-.dashboard-container header {
-  grid-area: header;
-  height: 50px;
-  background-color: #333;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-}
-
-.dashboard-container header div {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.dashboard-container main {
-  grid-area: main;
-  padding: 1rem;
-  overflow-y: auto;
-}
-
-.dashboard-container footer {
-  grid-area: footer;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
 
 @media screen and (min-width: 600px) {
-  .dashboard-container {
-    grid-template-columns: 200px 1fr;
-    grid-template-areas:
-      "header header"
-      "nav main"
-      "footer footer";
+  .actions {
+    flex-direction: row;
   }
-
-  .dashboard-container nav {
-    grid-area: nav;
-    position: static;
-    left: 0;
-    height: auto;
+  .directory-head .search-field {
+    width: 260px;
   }
-
-  .dashboard-container header div .menu {
-    display: none;
-  }
-
-  /* --- Tipografía y Fondo general --- */
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-  }
-
-  /* --- Título de la sección --- */
-  main h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    color: #0f172a;
-  }
-
-  /* --- Barra de Búsqueda --- */
-  #search-input {
-    padding: 0.55rem 0.85rem;
-    font-size: 0.95rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    width: 280px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  #search-input:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
-  }
-
-  #search-btn {
-    padding: 0.55rem 1.1rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-left: 0.5rem;
-    transition: background-color 0.2s;
-  }
-
-  #search-btn:hover {
-    background-color: #1d4ed8;
-  }
-
-  /* --- Tabla con estilo del TPI --- */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-  }
-
-  th {
-    background-color: #f1f5f9;
-    color: #475569;
-    font-weight: 600;
-    text-align: left;
-    padding: 0.85rem 1rem;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border-bottom: 1px solid #e2e8f0;
-  }
-
-  td {
-    padding: 1rem;
-    color: #334155;
-    font-size: 0.95rem;
-    border-bottom: 1px solid #f1f5f9;
-  }
-
-  tbody tr:last-child td {
-    border-bottom: none;
-  }
-
-  tbody tr:hover {
-    background-color: #f8fafc;
-  }
-
-  /* Botón cerrar sesión */
-  #logout {
-    background: transparent;
-    color: #e2e8f0;
-    border: 1px solid #64748b;
-    padding: 0.35rem 0.75rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.2s;
-  }
-
-  #logout:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-  }
-
 }
