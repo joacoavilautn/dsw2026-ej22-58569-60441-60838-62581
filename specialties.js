@@ -1,5 +1,5 @@
 function cargarTabla(lista) {
-  /*const tbody = document.querySelector('#specialities-table-body');
+  /*const tbody = document.querySelector('#specialties-table-body');
   tbody.innerHTML = '';
 
   lista.forEach(item => {
@@ -14,7 +14,7 @@ function cargarTabla(lista) {
     tr.appendChild(tdDescripcion);
     tbody.appendChild(tr);
   });*/
-  const tbody = document.querySelector('#specialities-table-body');
+  const tbody = document.querySelector('#specialties-table-body');
   if (lista.length === 0) {
     tbody.innerHTML = '<tr><td colspan="4" class="empty">No se encontraron especialidades.</td></tr>';
     return;
@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
      });
 
   
-     const addBtn = document.getElementById('add-speciality-btn');
+     const addBtn = document.getElementById('add-specialty-btn');
      addBtn.addEventListener('click', () => {
-     window.location.href = 'add-speciality.html';
+     window.location.href = 'add-specialty.html';
     });
  
     

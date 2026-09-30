@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
   document.getElementById('cancel-btn').addEventListener('click', () => {
-    window.location.href = 'specialities.html';
+    window.location.href = 'specialties.html';
   });
 
   document.getElementById('specialty-form').addEventListener('submit', (event) => {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       guardarEspecialidades(lista);
 
       alert('Especialidad guardada con éxito!');
-      window.location.href = 'specialities.html';
+      window.location.href = 'specialties.html';
     }
   });
 });

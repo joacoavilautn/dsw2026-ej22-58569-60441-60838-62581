@@ -1,0 +1,23 @@
+.form-card {
+  padding: 1.5rem;
+  max-width: 700px;
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 0.8rem;
+}
+
+.form-textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  justify-content: flex-end;
+}
