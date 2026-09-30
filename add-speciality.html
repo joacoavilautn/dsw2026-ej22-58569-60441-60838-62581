@@ -6,6 +6,7 @@
     <title>Agregar Especialidad</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="specialities_style.css">
+    <link rel="stylesheet" href="add-specialities_style.css">
 </head>
 <body>
     <div class="app-container">
@@ -54,27 +55,26 @@
       <h1>Registrar Nueva Especialidad</h1>
       <p class="subtitle">Complete la información técnica y administrativa para dar de alta una especialidad médica.</p>
 
-      <section class="card" style="padding: 1.5rem; max-width: 700px; margin-top: 1rem;">
+      <section class="card form-card">
         <form id="specialty-form">
 
-          <div style="margin-bottom: 1rem;">
+          <div class="form-group">
             <label for="input-nombre">Nombre de la Especialidad</label>
             <input type="text" id="input-nombre" class="input"
                    placeholder="Ej. Cardiología Intervencionista"
                    maxlength="15" required>
-            <span id="error-nombre" style="color:red; font-size:0.8rem;"></span>
+            <span id="error-nombre" class="error-text"></span>
           </div>
 
-          <div style="margin-bottom: 1rem;">
+          <div class="form-group">
             <label for="input-descripcion">Descripción</label>
-            <textarea id="input-descripcion" class="input"
+            <textarea id="input-descripcion" class="input form-textarea"
                       placeholder="Detalle el alcance de la especialidad..."
-                      maxlength="100" required
-                      style="height: 120px; resize: vertical;"></textarea>
-            <span id="error-descripcion" style="color:red; font-size:0.8rem;"></span>
+                      maxlength="100" required></textarea>
+            <span id="error-descripcion" class="error-text"></span>
           </div>
 
-          <div class="actions" style="justify-content: flex-end;">
+          <div class="actions form-actions">
             <button type="button" id="cancel-btn" class="btn btn-secondary">Cancelar</button>
             <button type="submit" class="btn btn-primary">Guardar Especialidad</button>
           </div>
