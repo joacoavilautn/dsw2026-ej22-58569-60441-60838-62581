@@ -1,18 +1,3 @@
-let especialidades = [];
-
-function obtenerEspecialidades() {
-    fetch('specialties.json')
-      .then(response => response.json())
-      .then(data => {
-        especialidades = data;
-        cargarTabla(especialidades);
-      })
-      .catch(error => {
-        console.log('Error:', error);
-        alert('Error al obtener las especialidades');
-      });
-  }
-
 function cargarTabla(lista) {
   /*const tbody = document.querySelector('#specialities-table-body');
   tbody.innerHTML = '';
@@ -89,9 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
   logoutButton.addEventListener('click', () => {
     window.location.href = 'login.html';
   });
-  obtenerEspecialidades();
+ const especialidades = obtenerEspecialidades();
+ cargarTabla(especialidades);
 
-  // --- Buscador (afuera de la función cargarTabla) ---
+  
   const searchInput = document.getElementById('search-input');
 
   searchInput.addEventListener('input', () => {
@@ -102,13 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       cargarTabla(filtrados);
     }else if(searchInput.value.length < 3){
-      cargarTabla(especialidades);
+      cargarTabla(obtenerEspecialidades());
     }
   });
-
-  // --- Botón de Logout y Menú ---
-
-
-
 
 });

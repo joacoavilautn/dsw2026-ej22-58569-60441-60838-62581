@@ -49,15 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (valido) {
+      const lista = obtenerEspecialidades();
      
       const nuevaEspecialidad = {
+        id: crypto.randomUUID(),
         name: nombre,
-        description: descripcion
+        description: descripcion,
+        active: true
       };
 
-      console.log('Nueva especialidad creada:', nuevaEspecialidad);
+      lista.push(nuevaEspecialidad);
+      guardarEspecialidades(lista);
 
-      
       alert('Especialidad guardada con éxito!');
       window.location.href = 'specialities.html';
     }
