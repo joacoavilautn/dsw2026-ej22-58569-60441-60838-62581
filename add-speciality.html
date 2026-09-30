@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Especialidad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="specialities_style.css">
+    <link rel="stylesheet" href="add-specialities_style.css">
+</head>
+<body>
+    <div class="app-container">
+    <header class="topbar">
+      <div>
+        <button id="menubtn" class="menu-btn">&#9776;</button>
+      </div>
+    </header>
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        Admin Portal
+        <small>Gestión de turnos médicos</small>
+      </div>
+      <ul>
+        <li><a href="dashboard.html"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+          </svg> Panel</a>
+        </li>
+        <li><a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857q.09.083.176.171a3 3 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01zM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5"/>
+          <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162z"/>
+          </svg> Doctores</a>
+        </li>
+        <li><a href="specialities.html" class="active"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5z"/>
+          </svg> Especialidades</a>
+        </li>
+        <li><a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+          </svg> Busqueda de Pacientes</a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <button id="logout" type="button"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+          </svg> Cerrar Sesión
+        </button>
+      </div>
+    </nav>
+
+    <main class="content">
+      <p class="subtitle">
+        <a href="specialities.html">Especialidades</a> &rsaquo; Agregar Nueva Especialidad
+      </p>
+      <h1>Registrar Nueva Especialidad</h1>
+      <p class="subtitle">Complete la información técnica y administrativa para dar de alta una especialidad médica.</p>
+
+      <section class="card form-card">
+        <form id="specialty-form">
+
+          <div class="form-group">
+            <label for="input-nombre">Nombre de la Especialidad</label>
+            <input type="text" id="input-nombre" class="input"
+                   placeholder="Ej. Cardiología Intervencionista"
+                   maxlength="15" required>
+            <span id="error-nombre" class="error-text"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="input-descripcion">Descripción</label>
+            <textarea id="input-descripcion" class="input form-textarea"
+                      placeholder="Detalle el alcance de la especialidad..."
+                      maxlength="100" required></textarea>
+            <span id="error-descripcion" class="error-text"></span>
+          </div>
+
+          <div class="actions form-actions">
+            <button type="button" id="cancel-btn" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar Especialidad</button>
+          </div>
+
+        </form>
+      </section>
+    </main>
+    </div>
+
+    <script src="add-speciality.js"></script>
+</body>
+</html>

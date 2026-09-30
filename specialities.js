@@ -67,11 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const logoutButton = document.getElementById('logout');
   const menuBtn = document.getElementById('menubtn');
   const sidebar = document.getElementById('sidebar');
+     menuBtn.addEventListener('click', () => {
+     sidebar.classList.toggle('open');
+     });
 
-    menuBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
-    document.addEventListener('click', (event) => {
+  
+     const addBtn = document.getElementById('add-speciality-btn');
+     addBtn.addEventListener('click', () => {
+     window.location.href = 'add-speciality.html';
+    });
+ 
+    
+  document.addEventListener('click', (event) => {
     const clickedOutside = !sidebar.contains(event.target) && !menuBtn.contains(event.target);
     if (clickedOutside) sidebar.classList.remove('open');
   });
