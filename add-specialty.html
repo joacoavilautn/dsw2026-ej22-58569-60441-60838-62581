@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Especialidad</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="specialties_style.css">
+    <link rel="stylesheet" href="specialities_style.css">
+    <link rel="stylesheet" href="add-specialities_style.css">
 </head>
 <body>
     <div class="app-container">
@@ -57,7 +58,7 @@
       <section class="card form-card">
         <form id="specialty-form">
 
-          <div style="margin-bottom: 1rem;">
+          <div class="form-group">
             <label for="input-nombre">Nombre de la Especialidad</label>
             <input type="text" id="input-nombre" class="input"
                    placeholder="Ej. Cardiología Intervencionista"
@@ -65,7 +66,7 @@
             <span id="error-nombre" class="error-text"></span>
           </div>
 
-          <div style="margin-bottom: 1rem;">
+          <div class="form-group">
             <label for="input-descripcion">Descripción</label>
             <textarea id="input-descripcion" class="input form-textarea"
                       placeholder="Detalle el alcance de la especialidad..."
