@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
   document.getElementById('cancel-btn').addEventListener('click', () => {
-    window.location.href = 'specialities.html';
+    window.location.href = 'specialties.html';
   });
 
   document.getElementById('specialty-form').addEventListener('submit', (event) => {
@@ -49,17 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (valido) {
+      const lista = obtenerEspecialidades();
      
       const nuevaEspecialidad = {
+        id: crypto.randomUUID(),
         name: nombre,
-        description: descripcion
+        description: descripcion,
+        active: true
       };
 
-      console.log('Nueva especialidad creada:', nuevaEspecialidad);
+      lista.push(nuevaEspecialidad);
+      guardarEspecialidades(lista);
 
-      
       alert('Especialidad guardada con éxito!');
-      window.location.href = 'specialities.html';
+      window.location.href = 'specialties.html';
     }
   });
 });
