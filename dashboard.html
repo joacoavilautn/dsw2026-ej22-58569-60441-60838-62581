@@ -21,12 +21,16 @@
     </header>
     <nav id="sidebar">
       <ul>
-        <li><a href="#">Panel</a></li>
+        <li><a href="dashboard.html" class="active">Especialidades</a></li>
+        <li><a href="specialty.html">Nueva Especialidad</a></li>
       </ul>
     </nav>
     <main>
-      <h1>Pacientes</h1>
-      <input type="text" id="search-input" placeholder="Ingrese el nombre del paciente">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+        <h1 style="margin: 0;">Directorio de Especialidades</h1>
+        <a href="specialty.html" class="btn-new-specialty">+ Nueva Especialidad</a>
+      </div>
+      <input type="text" id="search-input" placeholder="Buscar Especialidades">
       <button id="search-btn">Buscar</button>
       <table>
         <thead>

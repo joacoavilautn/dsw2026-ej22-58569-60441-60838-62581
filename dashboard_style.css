@@ -188,4 +188,200 @@
     color: white;
   }
 
-}
+  /* --- Botón + Nueva Especialidad --- */
+  .btn-new-specialty {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+
+  .btn-new-specialty:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* --- Breadcrumb --- */
+  .breadcrumb {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.25rem;
+  }
+
+  .breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  /* --- Contenedor del Formulario (Mockup TPI pág. 25) --- */
+  .form-container {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 650px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .form-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-header h1 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .form-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* --- Grupos del Formulario --- */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group .required {
+    color: #ef4444;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+
+  .form-group input.input-error,
+  .form-group textarea.input-error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+  }
+
+  .error-text {
+    font-size: 0.825rem;
+    color: #ef4444;
+    margin-top: 0.35rem;
+    min-height: 1.1rem;
+  }
+
+  /* --- Mensajes Generales --- */
+  .general-error {
+    color: #b91c1c;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .success-message {
+    color: #15803d;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  /* --- Acciones del Formulario --- */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.25rem;
+  }
+
+  .btn-cancel {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .btn-cancel:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+  }
+
+  .btn-submit {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .btn-submit:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* Enlaces de sidebar */
+  .dashboard-container nav ul li a {
+    text-decoration: none;
+    color: #334155;
+    display: block;
+  }
+
+  .dashboard-container nav ul li a:hover,
+  .dashboard-container nav ul li a.active {
+    color: #2563eb;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Nueva Especialidad</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard_style.css">
+  <script src="specialty.js" defer></script>
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <header>
+      <span>Gestor de turnos</span>
+      <div>
+        <button id="menubtn" class="menu">&#9776;</button>
+        <button id="logout">Cerrar Sesión</button>
+      </div>
+    </header>
+    <nav id="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Especialidades</a></li>
+        <li><a href="specialty.html" class="active">Nueva Especialidad</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="breadcrumb">
+        <a href="dashboard.html">Especialidades</a> &gt; <span>Agregar Nueva Especialidad</span>
+      </div>
+
+      <div class="form-container">
+        <div class="form-header">
+          <h1>Registrar Nueva Especialidad</h1>
+          <p class="form-subtitle">Complete la información técnica y administrativa para dar de alta una especialidad médica en el sistema hospitalario.</p>
+        </div>
+
+        <form id="specialty-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre de la Especialidad <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Ej: Cardiología">
+            <span class="error-text" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Descripción <span class="required">*</span></label>
+            <textarea id="description" name="description" rows="4" placeholder="Ingrese una descripción de la especialidad médica..."></textarea>
+            <span class="error-text" id="description-error"></span>
+          </div>
+
+          <div id="general-error" class="general-error"></div>
+          <div id="success-message" class="success-message"></div>
+
+          <div class="form-actions">
+            <a href="dashboard.html" class="btn-cancel">Cancelar</a>
+            <button type="submit" id="submit-btn" class="btn-submit">Guardar Especialidad</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>Mi Aplicación &copy; 2024</footer>
+  </div>
+</body>
+
+</html>
